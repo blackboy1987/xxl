@@ -1,10 +1,45 @@
 .app {
   padding:0;
-  margin:0;
-  background: url("https://bootx-xxl.oss-cn-hangzhou.aliyuncs.com/img/bg/back_game2.jpg") no-repeat;
+  margin:0 auto;
+  background: red;
+  /*background: url("https://bootx-xxl.oss-cn-hangzhou.aliyuncs.com/img/bg/back_game2.jpg") no-repeat;*/
 }
 .top{
-  height:10%;
+  height:260px;
+  width: 90%;
+  margin:0 auto;
+}
+.topInfo{
+  display: flex;
+  height: 120px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.level{
+
+}
+.score{
+  font-size:48px;
+  color:#fff;
+  font-weight: bold;
+}
+.target{
+
+}
+.topMenu{
+
+}
+.progress{
+  background-color: #ddd;
+  border-radius:20px;
+}
+.skills {
+  text-align: right;
+  padding-right: 20px;
+  line-height: 40px;
+  border-radius:20px;
+  color: white;
+  background-color: #2196F3;
 }
 .content{
   height: 80%;
@@ -13,6 +48,7 @@
   flex-wrap: wrap;
   box-sizing: border-box;
   justify-content: space-between;
+  background: url("https://bootx-xxl.oss-cn-hangzhou.aliyuncs.com/img/ad_panel.png") no-repeat;
 }
 .bottom{
   height: 10%;

@@ -11,6 +11,7 @@ export const wechat: WechatAppConfig = {
   window: {
     navigationBarBackgroundColor: color,
     navigationBarTitleText: 'Remax One Wechat',
+    navigationStyle: 'custom',
   },
 };
 

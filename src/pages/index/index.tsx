@@ -17,8 +17,8 @@ interface TangGuo{
 export default () => {
   const [height,setHeight] = useState<number>(0);
   const [width,setWidth] = useState<number>(0);
-  const [rows,setRows] = useState<number>(4);
-  const [cols,setCols] = useState<number>(4);
+  const [rows,setRows] = useState<number>(10);
+  const [cols,setCols] = useState<number>(10);
   const [current,setCurrent] = useState<TangGuo | null>();
   const [prev,setPrev] = useState<TangGuo | null>();
   const [tangguos,setTangguos] = useState<TangGuo[]>([]);
@@ -191,12 +191,33 @@ export default () => {
   }
   return (
     <View className={styles.app} style={{height:`${height*2}`}}>
-      <View className={styles.top}>ToolBar</View>
+      <View className={styles.top}>
+          <View className={styles.topInfo}>
+              <View className={styles.level}>
+                  关卡：1
+              </View>
+              <View className={styles.score}>
+                  900
+              </View>
+              <View className={styles.target}>
+                  目标：2900
+              </View>
+          </View>
+          <View className={styles.topMenu}>
+              <Text>
+                  <Image src='' />
+              </Text>
+          </View>
+          <View className={styles.progress}>
+              <View className={styles.skills} style={{width:'80%'}}>
+                  80%
+              </View>
+          </View>
+      </View>
       <View className={styles.content} style={{height:`${width*2}`}}>
           {
               tangguos.map((tangGuo)=>(
                   <View key={tangGuo.key} onTap={()=>handTap(tangGuo)} className={current?.key===tangGuo.key ? classNames(styles.item,styles.current):classNames(styles.item)} style={{width:width*2/cols,height:width*2/cols}}>
-                      {tangGuo.type}
                     <Image src={tangGuo.url} />
                   </View>
               ))
